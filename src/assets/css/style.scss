@@ -1,0 +1,46 @@
+.ion-text-bold {
+    font-weight: bold;
+}
+
+.ion-border ion-row:first-child {
+    border: 1px solid;
+}
+
+.ion-border ion-row:not(:first-child) {
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+}
+
+.ion-border ion-row ion-col:not(:last-child) {
+    border-right: 1px solid;
+}
+
+.bootstrap-table ion-row:nth-child(2n) {
+	background: #d7d7d7;
+	border-top: 1px solid #b3afaf;
+	border-bottom: 1px solid #b3afaf;
+}
+
+.bootstrap-table ion-row {
+    border-left: 1px solid #b3afaf;
+    border-right: 1px solid #b3afaf;
+}
+
+.header-blue {
+    background: #0000ff;
+    --background: #0000ff;
+    color: white;
+}
+
+.header-red {
+    background: #b80303;
+    --background: #b80303;
+    color: white;
+}
+
+.header-dark {
+    background: #080808;
+    --background: #080808;
+    color: white;
+}

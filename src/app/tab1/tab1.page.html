@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar [class]="tableHeader">
+    <ion-title>
+      Ionic Grid
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 1</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-list-header lines="inset">
+      <ion-label class="ion-text-bold">Change Table Header</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-button (click)="changeTableHeader('dark')" color="dark">Dark</ion-button>
+      <ion-button (click)="changeTableHeader('blue')" color="primary">Blue</ion-button>
+      <ion-button (click)="changeTableHeader('red')" color="danger">Red</ion-button>
+    </ion-item>
+
+    <ion-list-header>
+      <ion-label class="ion-text-bold">Change Table Theme</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-select (ionChange)="changeTableTheme($event.target.value)" value="ion-border">
+        <ion-select-option value="ion-border" selected>Basic Table</ion-select-option>
+        <ion-select-option value="bootstrap-table">Bootstrap Table</ion-select-option>
+      </ion-select>
+    </ion-item>
+   
+  </ion-list>
+
+  <ion-grid [class]="tableTheme">
+    <ion-row [class]="tableHeader">
+      <ion-col class="ion-text-bold"> Name </ion-col>
+      <ion-col class="ion-text-bold"> Gender </ion-col>
+      <ion-col class="ion-text-bold"> Company </ion-col>
+    </ion-row>
+
+    <ion-row *ngFor="let item of records">
+      <ion-col>{{ item?.name }}</ion-col>
+      <ion-col>{{ item?.gender }}</ion-col>
+      <ion-col>{{ item?.company }}</ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
