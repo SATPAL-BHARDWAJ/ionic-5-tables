@@ -13,5 +13,38 @@
     </ion-toolbar>
   </ion-header>
 
-  
+  <ion-list>
+    <ion-list-header>
+      <ion-label class="ion-text-bold">Change Table Theme</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-select (ionChange)="changeTableTheme($event)" value="material">
+        <ion-select-option value="material" selected>Material</ion-select-option>
+        <ion-select-option value="bootstrap">Bootstrap</ion-select-option>
+        <ion-select-option value="dark">Dark</ion-select-option>
+      </ion-select>
+    </ion-item>
+   
+  </ion-list>
+
+  <div>
+    <input
+      type="text"
+      style="padding:8px;margin:15px auto;width:60%;"
+      placeholder="Type to filter the data..."
+      (keyup)="updateFilter($event)"
+    />
+    <ngx-datatable
+      #table
+      [class]="tableTheme"
+      [columns]="columns"
+      [columnMode]="ColumnMode.force"
+      [headerHeight]="50"
+      footerHeight="auto"
+      rowHeight="auto"
+      [limit]="10"
+      [rows]="rows"
+    >
+    </ngx-datatable>
+  </div>
 </ion-content>
