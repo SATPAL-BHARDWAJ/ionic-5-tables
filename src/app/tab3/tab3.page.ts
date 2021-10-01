@@ -29,6 +29,7 @@ export class Tab3Page implements OnInit {
   }
 
   updateFilter(event) {
+    console.log(this.table);
     const val = event.target.value.toLowerCase();
 
     // filter our data

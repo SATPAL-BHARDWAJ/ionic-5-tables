@@ -25,9 +25,9 @@ export class Tab1Page implements OnInit {
     this.tableHeader = 'header-'+color;
   }
 
-  changeTableTheme( theme: string ) {
-    console.log(theme);
-    this.tableTheme = theme;
+  changeTableTheme( event: any ) {
+    console.log(event);
+    this.tableTheme = event.target.value;
   }
 
 }

@@ -27,7 +27,7 @@
       <ion-label class="ion-text-bold">Change Table Theme</ion-label>
     </ion-list-header>
     <ion-item>
-      <ion-select (ionChange)="changeTableTheme($event.target.value)" value="ion-border">
+      <ion-select (ionChange)="changeTableTheme($event)" value="ion-border">
         <ion-select-option value="ion-border" selected>Basic Table</ion-select-option>
         <ion-select-option value="bootstrap-table">Bootstrap Table</ion-select-option>
       </ion-select>
